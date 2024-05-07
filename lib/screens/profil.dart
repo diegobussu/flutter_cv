@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 class ProfilPage extends StatelessWidget {
   @override
@@ -40,10 +40,38 @@ class ProfilPage extends StatelessWidget {
               ),
             ),
             ListTile(
-              leading: Icon(Icons.web),
+              leading: Icon(Icons.maps_home_work),
               title: Text(
-                'Site Web : diegobussu.github.io',
+                'Localisation : Vincennes (94)',
                 style: TextStyle(fontSize: 16),
+              ),
+            ),
+            ListTile(
+              leading: Icon(Icons.web),
+              onTap: () async {
+                const url = 'https://diegobussu.github.io';
+                if (await canLaunchUrlString(url)) {
+                  await launchUrlString(url);
+                } else {
+                  throw 'Impossible de lancer $url';
+                }
+              },
+              title: RichText(
+                text: TextSpan(
+                  style: TextStyle(
+                    fontSize: 16,
+                    color: Colors.black, // Couleur du texte "Site Web :"
+                  ),
+                  children: <TextSpan>[
+                    TextSpan(text: 'Site Web : '),
+                    TextSpan(
+                      text: 'diegobussu.github.io',
+                      style: TextStyle(
+                        color: Colors.blue, // Couleur du texte de l'URL
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
             SizedBox(height: 20),
