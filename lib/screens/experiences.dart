@@ -14,7 +14,7 @@ class ExperiencesPage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               _buildExperienceItem(
-                'assets/experience1.png',
+                'assets/experience1.jpeg',
                 'Concepteur Développeur',
                 'CPAM du Val-de-Marne (94)',
                 'Réalisation de projets nationaux (CNAM) avec Symfony 5 (PHP 7.2) et PostgreSQL, impliquant l\'utilisation d\'API, la gestion de la sécurité (accès aux applications) et la mise en production.',
