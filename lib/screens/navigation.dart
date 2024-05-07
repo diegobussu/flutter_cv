@@ -48,7 +48,7 @@ class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
             label: 'Formations',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.check),
+            icon: Icon(Icons.star),
             label: 'Compétences',
           ),
           BottomNavigationBarItem(
@@ -57,7 +57,8 @@ class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
           ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.blue,
+        selectedItemColor: Colors.redAccent,
+        unselectedItemColor: Colors.black,
         onTap: _onItemTapped,
       ),
     );
