@@ -51,7 +51,7 @@ class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
             label: 'Formations',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.check),
+            icon: Icon(Icons.star),
             label: 'Compétences',
           ),
           BottomNavigationBarItem(
