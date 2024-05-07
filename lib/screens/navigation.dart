@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'profil.dart';
+import 'competences.dart';
+import 'formations.dart';
+import 'informations.dart';
+import 'experiences.dart';
 
 class MyBottomNavigationBar extends StatefulWidget {
   const MyBottomNavigationBar({Key? key}) : super(key: key);
@@ -10,12 +15,12 @@ class MyBottomNavigationBar extends StatefulWidget {
 class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
   int _selectedIndex = 0;
 
-  static const List<Widget> _widgetOptions = <Widget>[
-    Text('Profil'),
-    Text('Expériences'),
-    Text('Formations'),
-    Text('Compétences'),
-    Text('Informations'),
+  static List<Widget> _widgetOptions = <Widget>[
+    ProfilPage(),
+    ExperiencesPage(),
+    FormationsPage(),
+    CompetencesPage(),
+    InformationsPage(),
   ];
 
   void _onItemTapped(int index) {
@@ -30,9 +35,7 @@ class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
       appBar: AppBar(
         title: const Text('CV BUSSU DIEGO'),
       ),
-      body: Center(
-        child: _widgetOptions.elementAt(_selectedIndex),
-      ),
+      body: _widgetOptions.elementAt(_selectedIndex),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
@@ -48,7 +51,7 @@ class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
             label: 'Formations',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.star),
+            icon: Icon(Icons.check),
             label: 'Compétences',
           ),
           BottomNavigationBarItem(
