@@ -49,7 +49,7 @@ class InformationsPage extends StatelessWidget {
         _launchURL(description); // Lancer l'URL lorsque le texte est cliqué
       },
       child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Padding(
             padding: const EdgeInsets.only(right: 16.0),
@@ -62,6 +62,7 @@ class InformationsPage extends StatelessWidget {
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
                   title,

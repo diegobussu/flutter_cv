@@ -32,7 +32,7 @@ class CompetencesPage extends StatelessWidget {
               _buildCompetenceIcons([
                 'assets/postgresql.png',
                 'assets/mongodb.png',
-                'assets/mysql.png',
+                'assets/mysql.png'
               ]),
               SizedBox(height: 40),
               _buildSectionTitle('Autres'),
@@ -42,7 +42,9 @@ class CompetencesPage extends StatelessWidget {
                 'assets/photoshop.png',
                 'assets/illustrator.png',
                 'assets/git.png',
+                'assets/github.png',
                 'assets/gitlab.png',
+                'assets/jira.png'
               ]),
             ],
           ),
@@ -65,7 +67,7 @@ class CompetencesPage extends StatelessWidget {
       children: iconPaths.map((path) {
         return Image.asset(
           path,
-          width: 50,
+          width: 60,
           height: 50,
         );
       }).toList(),
